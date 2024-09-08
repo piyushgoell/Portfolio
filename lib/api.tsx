@@ -42,32 +42,47 @@ export interface Skill {
     return {
       name: "Piyush Goel",
       title: "Senior Integration Engineer",
-      about: "I’m a hands-on Senior Integration Engineer with a passion for connecting systems and streamlining business processes. With extensive experience in designing integration solutions, I focus on driving digital transformation and improving efficiency. I thrive on tackling challenges, solving problems independently, and always seeking opportunities to learn and grow. Beyond my work, I share my knowledge through my YouTube channel, helping others in the field of integration engineering by simplifying complex concepts and offering practical insights. I'm always eager to take action, make an impact, and support others in their journey.",
+      about: "I’m someone who likes to jump in and get things done. I prefer taking action over waiting, and I’m always looking for ways to learn and improve. I enjoy taking on challenges, solving problems independently, and sharing what I know to help others.",
       skills: [
+        {
+          title: "Programming Languages",
+          items: ["Java", "Python", "JavaScript", "C++"]
+        },
+        {
+          title: "Databases",
+          items: ["SQL (MySQL, SQL Server, PostgreSQL)", "NoSQL (MongoDB)"]
+        },
+
         {
           title: "Integration Platforms",
           items: ["TIBCO", "Azure" ]
         },
         {
-          title: "API Technologies",
-          items: ["REST", "SOAP", "GraphQL", "Webhooks"]
+          title: "TIBCO Products",
+          items: ["BusinessWorks 6.8+", "FTL 6.10","EMS 8.4","ActiveSpaces 4.9","TEA 2.4.1","Mashery 5.X"]
+        },
+        {
+          title: "TIBCO Plugins",
+          items: ["FTL 6.7", "ActiveSpaces 8.1", "LDAP 7.3", "Confidentiality 6.1","CRM 6.10","ADB 8.1", "FILE" ]
+        },
+
+        {
+          title: "Web Services",
+          items: ["REST", "SOAP"]
         },
         {
           title: "Data Formats",
-          items: ["JSON", "XML", "CSV", "EDI"]
+          items: ["JSON", "XML", "CSV"]
         },
         {
           title: "Cloud Platforms",
-          items: ["AWS", "Azure", "Google Cloud"]
+          items: ["Azure (DevOps, Logic Apps, Functions, OpenAI, Search Service, Azure Storage)"]
         },
         {
-          title: "Databases",
-          items: ["SQL (MySQL, PostgreSQL)", "NoSQL (MongoDB, Cassandra)"]
+          title: "API Testing",
+          items: ["Postman", "Soap UI", "Ready API"]
         },
-        {
-          title: "Programming Languages",
-          items: ["Java", "Python", "JavaScript", "C#"]
-        }
+
       ],
       projects: [
         {
@@ -86,12 +101,12 @@ export interface Skill {
         }
       ],
       youtubeChannel: {
-        url: "https://www.youtube.com/c/PiyushGoelIntegrationEngineer",
-        featuredVideoId: "dQw4w9WgXcQ",
+        url: "https://www.youtube.com/@GeeksSquadIndia",
+        featuredVideoId: "LKfl9UBIV6o",
         playlists: [
           {
-            title: "MuleSoft Masterclass",
-            description: "A comprehensive guide to mastering MuleSoft for enterprise integration. This playlist covers everything from basic concepts to advanced implementation techniques.",
+            title: "TIBCO Masterclass",
+            description: "A comprehensive guide to mastering TIBCO for enterprise integration. This playlist covers everything from basic concepts to advanced implementation techniques.",
             url: "https://www.youtube.com/playlist?list=PLxxxxxxxxxxxxxxxx"
           },
           {
@@ -102,11 +117,11 @@ export interface Skill {
         ]
       },
       socialLinks: {
-        github: "https://github.com/piyushgoel",
-        linkedin: "https://linkedin.com/in/piyushgoel",
-        email: "piyush.goel@example.com",
-        website: "https://piyushgoel.com",
-        youtube: "https://www.youtube.com/c/PiyushGoelIntegrationEngineer"
+        github: "https://github.com/piyushgoell",
+        linkedin: "https://linkedin.com/in/piyushgoell",
+        email: "piyushgoel.in@gmail.com",
+        website: "https://piyushgoell.github.io/portfolio",
+        youtube: "https://www.youtube.com/@GeeksSquadIndia"
       }
     };
   }
