@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail, Globe, Server, Database, Cloud, Youtube, ChevronRight } from "lucide-react"
 import Image from "next/image"
-import profilePic from '../lib/piyush_photo.jpg'
+import profilePic from '../lib/images/piyush_photo.png'
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"

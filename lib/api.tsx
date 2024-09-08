@@ -53,7 +53,7 @@ export interface Skill {
       skills: [
         {
           title: "Programming Languages",
-          items: ["Java", "Python", "JavaScript", "C++"]
+          items: ["Java", "Python", "JavaScript", "C++", "PowerShell"]
         },
         {
           title: "Databases",
@@ -61,7 +61,14 @@ export interface Skill {
         },
         {
           title: "Web Services",
-          items: ["REST", "SOAP"]
+          items: [
+            "RESTful APIs",
+            "SOAP",
+            "HTTP/HTTPS",
+            "Message Queues (JMS/EMS, FTL)",
+            "API Documentation (Swagger/OpenAPI)",
+            "API Authentication (OAuth2, JWT)"
+          ]
         },
         {
           title: "TIBCO Products",
@@ -80,12 +87,12 @@ export interface Skill {
           items: ["Postman", "Soap UI", "Ready API"]
         },
         {
-          title: "Build Tools",
-          items: ["Ant", "Ivy", "Maven"]
+          title: "Build & Containerization Tools",
+          items: ["Ant", "Maven","Docker", "Kubernetes"]
         },
         {
           title: "Monitoring and Analysis",
-          items: ["Splunk", "AppDynamics","Log Analysis","Root Cause Analysis"]
+          items: ["Splunk", "AppDynamics","Log Analysis","Root Cause Analysis","Grafana"]
         }
       ],
       experience: [
@@ -117,14 +124,14 @@ export interface Skill {
           description: "Streamlined order processing and inventory management",
           details: "Developed a comprehensive integration solution connecting an e-commerce platform with ERP and CRM systems, resulting in real-time inventory updates and automated order fulfillment. This project significantly improved operational efficiency and customer satisfaction.",
           technologies: ["MuleSoft", "REST APIs", "AWS"],
-          image: "/placeholder.svg?height=200&width=400"
+          image: ""
         },
         {
           title: "Healthcare Data Exchange",
           description: "Secure and compliant patient data integration",
           details: "Implemented a HIPAA-compliant integration platform to facilitate secure data exchange between hospitals, clinics, and insurance providers, improving patient care coordination. This solution ensured data privacy while enhancing the speed and accuracy of information sharing.",
           technologies: ["IBM Integration Bus", "HL7", "Azure"],
-          image: "/placeholder.svg?height=200&width=400"
+          image: ""
         }
       ],
       youtubeChannel: {
