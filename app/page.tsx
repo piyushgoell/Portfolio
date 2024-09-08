@@ -14,8 +14,7 @@ export default async function Portfolio() {
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-background to-secondary">
       <header className="px-4 lg:px-6 h-16 flex items-center backdrop-blur-sm bg-background/30 sticky top-0 z-50">
         <Link className="flex items-center justify-center" href="#">
-          <Server className="h-6 w-6 mr-2 text-primary" />
-          <span className="font-bold text-xl text-primary">{data.name}</span>
+
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:text-primary transition-colors" href="#about">
@@ -23,6 +22,9 @@ export default async function Portfolio() {
           </Link>
           <Link className="text-sm font-medium hover:text-primary transition-colors" href="#skills">
             Skills
+          </Link>
+           <Link className="text-sm font-medium hover:text-primary transition-colors" href="#experience">
+            Experience
           </Link>
           <Link className="text-sm font-medium hover:text-primary transition-colors" href="#projects">
             Projects
@@ -40,15 +42,13 @@ export default async function Portfolio() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
-  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl leading-none bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
-    {data.name}
-  </h1>
-  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-    {data.title}
-  </p>
-</div>
-
-
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl leading-none bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+                {data.name}
+              </h1>
+              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                {data.title}
+              </p>
+            </div>
               <div className="space-x-4">
                 <Link href="#projects">
                   <Button className="bg-primary text-primary-foreground hover:bg-primary/90">View Projects</Button>
@@ -105,6 +105,33 @@ export default async function Portfolio() {
             </div>
           </div>
         </section>
+        <section id="experience" className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-primary/20 via-primary/10 to-background">
+  <div className="container px-4 md:px-6">
+    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+      Experience
+    </h2>
+    <div className="space-y-6">
+      {data.experience.map((job, index) => (
+        <Card key={index} className="bg-card/50 backdrop-blur-sm hover:shadow-lg transition-shadow">
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold">{job.role}</CardTitle>
+            <CardDescription className="text-muted-foreground">
+              {job.company} | {job.period}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc pl-4 space-y-2">
+              {job.responsibilities.map((responsibility, responsibilityIndex) => (
+                <li key={responsibilityIndex}>{responsibility}</li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
         <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Featured Projects</h2>
@@ -147,18 +174,6 @@ export default async function Portfolio() {
                 Join me on my YouTube channel where I share in-depth knowledge about integration engineering, best
                 practices, and the latest trends in the industry.
               </p>
-              <div className="aspect-video mb-8">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${data.youtubeChannel.featuredVideoId}`}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="rounded-lg shadow-lg"
-                ></iframe>
-              </div>
               <h3 className="text-2xl font-semibold mb-4">Featured Playlists</h3>
               <div className="grid gap-6 sm:grid-cols-2">
                 {data.youtubeChannel.playlists.map((playlist, index) => (
@@ -192,7 +207,7 @@ export default async function Portfolio() {
           </div>
         </section>
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6">     
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Get in Touch</h2>
             <div className="flex justify-center space-x-4">
               <Link href={data.socialLinks.github}>

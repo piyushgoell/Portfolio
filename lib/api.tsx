@@ -16,17 +16,23 @@ export interface Skill {
     description: string;
     url: string;
   }
+
+  export interface Experience {
+    company: string;
+    role: string;
+    period: string;
+    responsibilities: string[];
+  }  
   
   export interface PortfolioData {
     name: string;
     title: string;
     about: string;
     skills: Skill[];
-    experience: string[];
+    experience: Experience[];
     projects: Project[];
     youtubeChannel: {
       url: string;
-      featuredVideoId: string;
       playlists: YoutubePlaylist[];
     };
     socialLinks: {
@@ -41,7 +47,7 @@ export interface Skill {
   export async function getPortfolioData(): Promise<PortfolioData> {
     // In a real scenario, this would fetch data from an API or database
     return {
-      name: "Piyush Goel",
+      name: "PIYUSH GOEL",
       title: "Senior Integration Engineer",
       about: "I’m someone who likes to jump in and get things done. I prefer taking action over waiting, and I’m always looking for ways to learn and improve. I enjoy taking on challenges, solving problems independently, and sharing what I know to help others.",
       skills: [
@@ -82,7 +88,29 @@ export interface Skill {
           items: ["Splunk", "AppDynamics","Log Analysis","Root Cause Analysis"]
         }
       ],
-      experience:[],
+      experience: [
+        {
+          company: "Accenture",
+          role: "Senior Integration Engineer",
+          period: "March 2021 - September 2024",
+          responsibilities: [
+                        "Contributed to the migration of TIBCO BW5 projects to TIBCO BW6, including analysis, conversion, and testing to ensure seamless integration and functionality.",
+            "Extended TIBCO BusinessWorks capabilities with custom Java classes and libraries, optimizing integration solutions.",
+            "Receive design handovers from the functional design team and closely collaborate with backend teams to create technical design documents using SOA patterns, including sequence diagrams, mapping sheets, Swagger documentation, and XSDs.",
+            "Orchestrated the solution design into a 3-layer architecture—presentation, business, and technical tiers—to achieve microservice-level granularity.",
+            "Designed and implemented complex integration solutions using TIBCO BusinessWorks and EMS/FTL, facilitating seamless communication between enterprise applications.",
+            "Collaborated with cross-functional teams to gather requirements, design solutions, and ensure project delivery within timelines.",
+            "Design and build RESTful and SOAP web services and end-to-end integration processes with TIBCO BusinessWorks to ensure smooth data flow and communication between systems.",
+            "Estimate efforts for new changes, including updates to design documents, code modifications, and testing. Incorporate updates to ensure seamless integration and functionality.",
+            "Managed defects and tracked bug fixes through hierarchical testing stages up to UAT by analysing logs with Splunk and writing SQL queries to examine databases, targeting a zero-defect outcome.",
+            "Handle deployment and performance tuning of applications, including configuring load balancing and fault tolerance on TEA. Finalize configurations with client architects.", 
+            "Create and update Mashery configurations to manage access for internal users, staff, and advisers.",
+            "Designed and developed a caching solution using sessions with TIBCO ActiveSpaces, optimizing data access and performance.",
+            "Manage ActiveSpaces tables by writing and executing TIBDG command line utility commands to automate the creation of tables across different environments.",
+            "Trained junior developers on TIBCO tools and best practices, improving team capability and knowledge base."
+          ]
+        }
+      ],  
       projects: [
         {
           title: "E-commerce Integration Suite",
@@ -101,7 +129,6 @@ export interface Skill {
       ],
       youtubeChannel: {
         url: "https://www.youtube.com/@GeeksSquadIndia",
-        featuredVideoId: "LKfl9UBIV6o",
         playlists: [
           {
             title: "TIBCO Masterclass",
