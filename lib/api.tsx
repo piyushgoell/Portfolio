@@ -22,6 +22,7 @@ export interface Skill {
     title: string;
     about: string;
     skills: Skill[];
+    experience: string[];
     projects: Project[];
     youtubeChannel: {
       url: string;
@@ -52,10 +53,9 @@ export interface Skill {
           title: "Databases",
           items: ["SQL (MySQL, SQL Server, PostgreSQL)", "NoSQL (MongoDB)"]
         },
-
         {
-          title: "Integration Platforms",
-          items: ["TIBCO", "Azure" ]
+          title: "Web Services",
+          items: ["REST", "SOAP"]
         },
         {
           title: "TIBCO Products",
@@ -65,25 +65,24 @@ export interface Skill {
           title: "TIBCO Plugins",
           items: ["FTL 6.7", "ActiveSpaces 8.1", "LDAP 7.3", "Confidentiality 6.1","CRM 6.10","ADB 8.1", "FILE" ]
         },
-
         {
-          title: "Web Services",
-          items: ["REST", "SOAP"]
-        },
-        {
-          title: "Data Formats",
-          items: ["JSON", "XML", "CSV"]
-        },
-        {
-          title: "Cloud Platforms",
-          items: ["Azure (DevOps, Logic Apps, Functions, OpenAI, Search Service, Azure Storage)"]
+          title: "Azure Products",
+          items: ["Azure DevOps", "Azure Logic Apps", "Azure Functions", "Azure OpenAI", "Azure AI Search","Azure Storage","Azure Repos", "Power Automate"]
         },
         {
           title: "API Testing",
           items: ["Postman", "Soap UI", "Ready API"]
         },
-
+        {
+          title: "Build Tools",
+          items: ["Ant", "Ivy", "Maven"]
+        },
+        {
+          title: "Monitoring and Analysis",
+          items: ["Splunk", "AppDynamics","Log Analysis","Root Cause Analysis"]
+        }
       ],
+      experience:[],
       projects: [
         {
           title: "E-commerce Integration Suite",
