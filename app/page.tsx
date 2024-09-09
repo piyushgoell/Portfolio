@@ -228,7 +228,7 @@ export default function Portfolio() {
         </motion.section>
         
         <motion.section
-          id="testimonials"
+          id="feedbacks"
           className="w-full py-12 md:py-24 lg:py-32 bg-white"
           initial="initial"
           whileInView="animate"

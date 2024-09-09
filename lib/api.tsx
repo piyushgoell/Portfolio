@@ -76,7 +76,7 @@ export async function getNavData(): Promise<NavItem[]> {
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
-    { href: "#testimonials", label: "Testimonials" },
+    { href: "#feedbacks", label: "Feedbacks" },
     { href: "#contact", label: "Contact" },
   ];
 }
