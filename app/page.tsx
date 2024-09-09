@@ -125,7 +125,7 @@ export default function Portfolio() {
           variants={fadeInUp}
         >
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-b from-primary to-purple-600">About Me</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 bg-clip-text text-transparent bg-gradient-to-b from-primary to-purple-600">About Me</h2>
             <div className="flex flex-col md:flex-row items-center gap-8">
               <Image
                 src={profilePic}
@@ -213,7 +213,7 @@ export default function Portfolio() {
                     <CardContent className="flex-grow">
                       <p>Issued: {cert.date}</p>
                     </CardContent>
-                    <CardContent>
+                    <CardContent className="mt-auto">
                       <Link href={cert.digitalCertificateUrl} target="_blank" rel="noopener noreferrer">
                         <Button variant="outline" className="w-full">
                           View Certificate
@@ -240,7 +240,7 @@ export default function Portfolio() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {data?.testimonials.map((testimonial, index) => (
                 <motion.div key={index} variants={fadeInUp}>
-                  <Card className="bg-card/50 backdrop-blur-sm hover:shadow-lg transition-shadow">
+                  <Card className="flex-1 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-shadow flex flex-col h-full">
                     <CardHeader>
                       <CardTitle>{testimonial.name}</CardTitle>
                       <CardDescription>{testimonial.role}</CardDescription>
@@ -249,7 +249,7 @@ export default function Portfolio() {
                       <p className="italic">{testimonial.content}</p>
                     </CardContent>
                     {testimonial.link && (
-                      <CardContent>
+                      <CardContent className="mt-auto">
                         <Link href={testimonial.link} target="_blank" rel="noopener noreferrer">
                           <Button variant="outline" className="w-full">
                             View Feedback
@@ -373,13 +373,15 @@ export default function Portfolio() {
                         <p className="text-sm text-muted-foreground mb-4">
                           {playlist.description}
                         </p>
-                        <Link href={playlist.url}>
-                          <Button variant="outline" className="w-full">
-                            Watch Playlist
-                            <ChevronRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </Link>
-                      </CardContent>
+                        </CardContent>
+                        <CardContent className="mt-auto">
+                          <Link href={playlist.url}>
+                            <Button variant="outline" className="w-full">
+                              Watch Playlist
+                              <ChevronRight className="ml-2 h-4 w-4" />
+                            </Button>
+                          </Link>
+                        </CardContent>
                     </Card>
                   </motion.div>
                 ))}

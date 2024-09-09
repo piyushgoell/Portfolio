@@ -72,7 +72,7 @@ export interface NavItem {
 // Asynchronous function to get navigation data
 export async function getNavData(): Promise<NavItem[]> {
   return [
-    { href: "#about", label: "About" },
+    { href: "#about", label: "About Me" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
@@ -265,7 +265,7 @@ export async function getNavData(): Promise<NavItem[]> {
             url: "https://www.youtube.com/playlist?list=PLY10fUJxblacRvXdGRIN3FNJ4OirI8fNt"
           },
           {
-            title: "TIBCO BW6 Fundamentals",
+            title: "TIBCO BW6 - Key Concepts & Fundamentals",
             description: "Welcome to our comprehensive playlist on TIBCO BusinessWorks 6.X Fundamentals! Whether you're a beginner exploring integration solutions or an experienced developer looking to dive into the latest version of TIBCO BusinessWorks, this series is tailored just for you. Let's dive in",
             url: "https://www.youtube.com/playlist?list=PLY10fUJxblaf9uQ5FoD8bhQcgoACd4sNs"
           }
