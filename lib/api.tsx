@@ -28,7 +28,7 @@ export interface Skill {
     name: string;
     title: string;
     about: string;
-    resumeLink: string;
+    resumeLink?: string;
     skills: Skill[];
     experience: Experience[];
     projects: Project[];
@@ -87,7 +87,7 @@ export async function getNavData(): Promise<NavItem[]> {
       name: "PIYUSH GOEL",
       title: "Senior Integration Engineer",
       about: "I’m someone who likes to jump in and get things done. I prefer taking action over waiting, and I’m always looking for ways to learn and improve. I enjoy taking on challenges, solving problems independently, and sharing what I know to help others.",
-      resumeLink: "https://drive.google.com/file/d/1bPYurp5r6LEoSOzsH0z1_LC8TlOo3Jfy",
+//      resumeLink: "https://drive.google.com/file/d/1bPYurp5r6LEoSOzsH0z1_LC8TlOo3Jfy",
       skills: [
         {
           title: "Programming Languages",
