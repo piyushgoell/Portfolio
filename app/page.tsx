@@ -25,32 +25,52 @@ import {
   NavItem,
 } from "@/lib/types/Portfolio";
 import { motion } from "framer-motion";
-import { Home, Navbar, Skills, Experience, Certification, Feedbacks }from "@/components/sections";
+import { Home, Navbar, Skills, Experience, Certification, Feedbacks, YoutubeChannel }from "@/components/sections";
 import { fadeInUp } from "@/lib/animate/Animation";
-import YoutubeChannel from "@/components/sections/YoutubeChannel";
+import BouncingLoader from "@/components/ui/BouncingLoader";
 
 
 
 export default function Portfolio() {
-  const [data, setData] = useState<PortfolioData>();
+  const [data, setData] = useState<PortfolioData | null>(null); // Start with null
   const [navItems, setNavItems] = useState<NavItem[]>([]);
+  const [loading, setLoading] = useState<boolean>(true); // State to manage loading
 
   useEffect(() => {
     const fetchData = async () => {
-      window.scrollTo(0, 0);
-      const portfolioData = await getPortfolioData();
-      const navigationData = await getNavData();
-
-      setData(portfolioData);
-      setNavItems(navigationData);
+      window.scrollTo(0, 0); // Scroll to top when component mounts
+      try {
+        const portfolioData = await getPortfolioData();
+        const navigationData = await getNavData();
+        setData(portfolioData);
+        setNavItems(navigationData);
+      } catch (error) {
+        console.error('Failed to fetch data:', error);
+      } finally {
+        setLoading(false); // Set loading to false when data is fetched or error occurs
+      }
     };
 
     fetchData();
   }, []);
 
-  if (!data) {
-    return <motion.div className="bg-primary"></motion.div>; // Show loading state
+  if (loading) {
+    return (
+      <motion.div className="bg-primary flex items-center justify-center min-h-screen">
+      <BouncingLoader />
+    </motion.div>
+    ); // Show loading state
   }
+
+  // Handle case where data is still null (although it shouldn't be if loading is false)
+  if (!data) {
+    return (
+      <motion.div className="bg-primary flex items-center justify-center min-h-screen">
+        <p className="text-white">No data available.</p>
+      </motion.div>
+    );
+  }
+  
   return (
     
     <motion.div className="flex flex-col min-h-screen bg-primary">
