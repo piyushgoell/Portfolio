@@ -31,3 +31,17 @@ export const footerVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
+// Animation.js or Animation.ts
+export const bounceVariants = {
+  animate: (i: number) => ({
+    y: [0, -15, 0], // Adjust these values for more or less bounce
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+      repeat: Infinity,
+      delay: i * 0.2, // Delay each dot's animation slightly to create a staggered effect
+    },
+  }),
+};
+
+

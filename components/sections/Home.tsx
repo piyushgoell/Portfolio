@@ -39,7 +39,7 @@ const Home: React.FC<{ data: PortfolioData }> = ({ data }) => {
 
       {/* Name */}
       <motion.div
-        key={data?.name}
+        key={`Hi, I'm `+data?.name}
         variants={sentenceAnimate}
         initial="hidden"
         animate="visible"

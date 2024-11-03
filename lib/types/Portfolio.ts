@@ -88,7 +88,7 @@ export async function getNavData(): Promise<NavItem[]> {
   export async function getPortfolioData(): Promise<PortfolioData> {
     // In a real scenario, this would fetch data from an API or database
     return {
-      name: "Hi, I'm Piyush Goel",
+      name: "Piyush Goel",
       title: "Senior Integration Engineer",
       profilePic: "",
       about: "I’m someone who likes to jump in and get things done. I prefer taking action over waiting, and I’m always looking for ways to learn and improve. I enjoy taking on challenges, solving problems independently, and sharing what I know to help others.",
@@ -282,7 +282,7 @@ export async function getNavData(): Promise<NavItem[]> {
       socialLinks: {
         github: "https://github.com/piyushgoell",
         linkedin: "https://linkedin.com/in/piyushgoell",
-        email: "piyushgoel.in@gmail.com",
+        email: "piyushgoel.in@outlook.com",
         website: "https://piyushgoell.github.io/portfolio",
         youtube: "https://www.youtube.com/@GeeksSquadIndia"
       }

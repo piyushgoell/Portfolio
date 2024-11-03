@@ -11,12 +11,10 @@ import { Home, Navbar, Skills, Experience, Certification, Feedbacks, YoutubeChan
 import BouncingLoader from "@/components/ui/BouncingLoader";
 
 
-
-
 export default function Portfolio() {
   const [data, setData] = useState<PortfolioData | null>(null); // Start with null
   const [navItems, setNavItems] = useState<NavItem[]>([]);
-  const [loading, setLoading] = useState<boolean>(true); // State to manage loading
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,6 +22,10 @@ export default function Portfolio() {
       try {
         const portfolioData = await getPortfolioData();
         const navigationData = await getNavData();
+
+        // Simulate a loading delay (e.g., 1.5 seconds)
+        await new Promise(resolve => setTimeout(resolve, 3000));
+
         setData(portfolioData);
         setNavItems(navigationData);
       } catch (error) {
@@ -37,19 +39,10 @@ export default function Portfolio() {
   }, []);
 
   if (loading) {
-    return (
-      <BouncingLoader />
-    ); // Show loading state
+    return <BouncingLoader />; // Show loading state
   }
 
-  // Handle case where data is still null (although it shouldn't be if loading is false)
-  if (!data) {
-    return (
-        <div></div>
-    );
-  }
-
-  return (
+  return data ? (
     
     <div className="flex flex-col min-h-screen bg-primary">
       
@@ -71,5 +64,7 @@ export default function Portfolio() {
         <Footer data={data}/>
       </footer>
     </div>
+  ) : (
+    <div className="flex items-center justify-center h-screen text-text-muted"></div>
   );
 }
