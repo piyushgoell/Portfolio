@@ -6,7 +6,7 @@ import {
     CardDescription,
     CardHeader,
     CardTitle,
-  } from "@/components/ui/card";
+  } from "@/components/ui/Card";
 import { fadeInUp } from "@/lib/animate/animation";
 
 const Experience: React.FC<{data: PortfolioData}> = ({ data } ) => {

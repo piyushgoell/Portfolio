@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react"; // Import icons
-import { Button } from "@/components/ui/button"; // Ensure Button component is imported
+import { Button } from "@/components/ui/Button"; // Ensure Button component is imported
 import { PortfolioData } from "@/lib/types/portfolio"; // Type for props
 import profilePic from "@/lib/images/piyush_photo.png"; // Profile picture
 import { useState } from "react";

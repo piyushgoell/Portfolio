@@ -6,11 +6,11 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/Card";
 import { fadeInUp } from "@/lib/animate/animation";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { useState } from "react";
-import PDFModal from "@/components/ui/pdfModal"; // Ensure PDFModal is correctly imported
+import PDFModal from "@/components/ui/PDFModal"; // Ensure PDFModal is correctly imported
 
 const Feedbacks: React.FC<{ data: PortfolioData }> = ({ data }) => {
   const [isModalOpen, setModalOpen] = useState(false);
