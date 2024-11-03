@@ -26,7 +26,7 @@ const Experience: React.FC<{data: PortfolioData}> = ({ data } ) => {
           <motion.div className="space-y-6">
             {data?.experience.map((job, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                <Card className="flex-1 flex flex-col h-full p-6 bg-card text-card-foreground rounded-xl shadow-lg border border-transparent transition-transform duration-200 hover:scale-105 hover:border-secondary hover:shadow-xl">
                   <CardHeader>
                     <CardTitle className="text-3xl font-bold mb-4 text-left text-secondary transition-colors duration-200">
                       {job.role}

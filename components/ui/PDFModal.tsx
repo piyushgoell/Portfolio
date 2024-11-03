@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 
 const PDFModal: React.FC<{ isOpen: boolean; onClose: () => void; pdfUrl: string; title: string; }> = ({ isOpen, onClose, pdfUrl, title }) => {
+  // Effect to manage body overflow
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'; // Disable scroll on body
+    } else {
+      document.body.style.overflow = 'unset'; // Enable scroll on body
+    }
+
+    // Clean up to reset body style
+    return () => {
+      document.body.style.overflow = 'unset'; // Ensure it's reset when modal closes
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null; // Don't render anything if the modal is not open
 
   return (
