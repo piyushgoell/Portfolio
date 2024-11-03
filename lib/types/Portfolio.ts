@@ -12,6 +12,7 @@ export interface Skill {
   }
   
   export interface YoutubePlaylist {
+    id: string;
     title: string;
     description: string;
     url: string;
@@ -36,7 +37,10 @@ export interface Skill {
     testimonials: Testimonial[];
     certifications: Certification[];
     youtubeChannel: {
+      id: string;
       url: string;
+      title: string;
+      description: string;
       playlists: YoutubePlaylist[];
     };
     socialLinks: {
@@ -103,9 +107,8 @@ export async function getNavData(): Promise<NavItem[]> {
           items: [
             "RESTful APIs",
             "SOAP",
-            "HTTP/HTTPS",
             "Message Queues (JMS, EMS, FTL)",
-            "API Documentation (Swagger/OpenAPI)",
+            "OpenAPI Specification (Swagger)",
             "API Authentication (OAuth2, JWT, TSL, API Key, SSO)"
           ]
         },
@@ -257,14 +260,19 @@ export async function getNavData(): Promise<NavItem[]> {
         }
       ],
       youtubeChannel: {
+        id: "UCKZv93VN0iTiWIGlBGAdCjg",
         url: "https://www.youtube.com/@GeeksSquadIndia",
+        title : "Geeks Squad India",
+        description : "Join me on my YouTube channel (GeeksSquadIndia) where I share in-depth knowledge about integration engineering, best practices, and the latest trends in the industry.",
         playlists: [
           {
-            title: "RESTful Integration Mastery with TIBCO BW6",
+            id: "PLY10fUJxblacRvXdGRIN3FNJ4OirI8fNt",
+            title: "TIBCO BW6 - RESTful Integration Mastery",
             description: "Welcome to our TIBCO BW6 playlist dedicated to mastering RESTful service implementation! In this comprehensive series, Whether you're a beginner or an experienced developer, our hands-on tutorials cover everything from the basics of RESTful architecture to advanced techniques for seamless integration. Let's dive in and streamline your services for maximum impact!",
             url: "https://www.youtube.com/playlist?list=PLY10fUJxblacRvXdGRIN3FNJ4OirI8fNt"
           },
           {
+            id:"PLY10fUJxblaf9uQ5FoD8bhQcgoACd4sNs",
             title: "TIBCO BW6 - Key Concepts & Fundamentals",
             description: "Welcome to our comprehensive playlist on TIBCO BusinessWorks 6.X Fundamentals! Whether you're a beginner exploring integration solutions or an experienced developer looking to dive into the latest version of TIBCO BusinessWorks, this series is tailored just for you. Let's dive in",
             url: "https://www.youtube.com/playlist?list=PLY10fUJxblaf9uQ5FoD8bhQcgoACd4sNs"

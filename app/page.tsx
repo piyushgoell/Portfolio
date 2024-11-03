@@ -7,7 +7,6 @@ import {
   Mail,
   Globe,
   Youtube,
-  ChevronRight
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,6 +27,7 @@ import {
 import { motion } from "framer-motion";
 import { Home, Navbar, Skills, Experience, Certification, Feedbacks }from "@/components/sections";
 import { fadeInUp } from "@/lib/animate/Animation";
+import YoutubeChannel from "@/components/sections/YoutubeChannel";
 
 
 
@@ -37,6 +37,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     const fetchData = async () => {
+      window.scrollTo(0, 0);
       const portfolioData = await getPortfolioData();
       const navigationData = await getNavData();
 
@@ -64,6 +65,7 @@ export default function Portfolio() {
         <Experience data={data}/>
         <Certification data={data} />
         <Feedbacks data={data}/>
+        <YoutubeChannel data={data}/>
 
         
 
@@ -126,66 +128,7 @@ export default function Portfolio() {
           </div>
         </motion.section>
 
-        <motion.section
-          id="youtube"
-          className="w-full py-12 md:py-24 lg:py-32 bg-secondary/20"
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
-          <div className="container px-4 md:px-6">
-            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl text-center mb-10 text-text-heading">
-              YouTube Channel
-            </h2>
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground mb-6">
-                Join me on my YouTube channel (GeeksSquadIndia) where I share
-                in-depth knowledge about integration engineering, best
-                practices, and the latest trends in the industry.
-              </p>
-              <h3 className="text-3xl font-semibold mb-4">
-                Featured Playlists
-              </h3>
-              <div className="grid gap-6 sm:grid-cols-2">
-                {data?.youtubeChannel.playlists.map((playlist, index) => (
-                  <motion.div key={index} variants={fadeInUp}>
-                    <Card className="bg-card text-card-foreground backdrop-blur-sm hover:shadow-lg transition-shadow flex flex-col h-full p-6">
-                      <CardHeader>
-                        <CardTitle className="text-2xl font-semibold">
-                          {playlist.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-sm text-muted-foreground mb-4">
-                          {playlist.description}
-                        </p>
-                      </CardContent>
-                      <CardContent className="mt-auto">
-                        <Link href={playlist.url}>
-                          <Button variant="outline" className="w-full">
-                            Watch Playlist
-                            <ChevronRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </Link>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
-              <div className="mt-8">
-                {data?.youtubeChannel.url && (
-                  <Link href={data.youtubeChannel.url}>
-                    <Button className="bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
-                      <Youtube className="mr-2 h-4 w-4" />
-                      Subscribe to My Channel
-                    </Button>
-                  </Link>
-                )}
-              </div>
-            </div>
-          </div>
-        </motion.section>
+        
 
         <motion.section
           id="contact"
