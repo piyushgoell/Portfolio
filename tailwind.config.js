@@ -50,6 +50,18 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+         red: {
+          DEFAULT: "hsl(var(--red))", // Define your red color
+          hover: "hsl(var(--red-hover))", // Define hover color
+        },
+        /* Organized text colors */
+        text: {
+          heading: "hsl(var(--text-heading))",
+          body: "hsl(var(--text-body))",
+          link: "hsl(var(--text-link))",
+          "link-hover": "hsl(var(--text-link-hover))",
+          muted: "hsl(var(--text-muted))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

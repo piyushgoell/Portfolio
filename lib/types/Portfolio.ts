@@ -27,6 +27,7 @@ export interface Skill {
   export interface PortfolioData {
     name: string;
     title: string;
+    profilePic?: string;
     about: string;
     resumeLink?: string;
     skills: Skill[];
@@ -72,7 +73,6 @@ export interface NavItem {
 // Asynchronous function to get navigation data
 export async function getNavData(): Promise<NavItem[]> {
   return [
-    { href: "#about", label: "About Me" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
@@ -84,18 +84,19 @@ export async function getNavData(): Promise<NavItem[]> {
   export async function getPortfolioData(): Promise<PortfolioData> {
     // In a real scenario, this would fetch data from an API or database
     return {
-      name: "PIYUSH GOEL",
+      name: "Hi, I'm Piyush Goel",
       title: "Senior Integration Engineer",
+      profilePic: "",
       about: "I’m someone who likes to jump in and get things done. I prefer taking action over waiting, and I’m always looking for ways to learn and improve. I enjoy taking on challenges, solving problems independently, and sharing what I know to help others.",
-//      resumeLink: "https://drive.google.com/file/d/1bPYurp5r6LEoSOzsH0z1_LC8TlOo3Jfy",
+      resumeLink: "https://drive.google.com/uc?export=download&id=1bPYurp5r6LEoSOzsH0z1_LC8TlOo3Jfy",
       skills: [
         {
-          title: "Programming Languages",
+          title: "Languages",
           items: ["Java", "Python", "JavaScript", "C++", "PowerShell"]
         },
         {
           title: "Databases",
-          items: ["SQL (MySQL, SQL Server, PostgreSQL)", "NoSQL (MongoDB)"]
+          items: ["MySQL", "SQL Server", "PostgreSQL", "IBM DB2",]
         },
         {
           title: "Web Services",
@@ -103,9 +104,9 @@ export async function getNavData(): Promise<NavItem[]> {
             "RESTful APIs",
             "SOAP",
             "HTTP/HTTPS",
-            "Message Queues (JMS/EMS, FTL)",
+            "Message Queues (JMS, EMS, FTL)",
             "API Documentation (Swagger/OpenAPI)",
-            "API Authentication (OAuth2, JWT)"
+            "API Authentication (OAuth2, JWT, TSL, API Key, SSO)"
           ]
         },
         {
@@ -125,7 +126,7 @@ export async function getNavData(): Promise<NavItem[]> {
           items: ["Postman", "Soap UI", "Ready API"]
         },
         {
-          title: "Build & Containerization Tools",
+          title: "CI/CD Tools",
           items: ["Ant", "Maven","Docker", "Kubernetes"]
         },
         {
@@ -159,7 +160,7 @@ export async function getNavData(): Promise<NavItem[]> {
       testimonials: [
         {
           name: "Ruth Sadler",
-          role: "Client-Side Technical Solutions Manager",
+          role: "Technical Solutions Lead",
           content: `Piyush is a key member of the API build team. He always ensures he understands a design handover or
                     defect at a very detailed level, and carries out his own analysis to effectively challenge the design in any
                     areas where it is open to interpretation, or could be improved. He highlights areas where the design and
@@ -169,7 +170,6 @@ export async function getNavData(): Promise<NavItem[]> {
                     Piyush also works effectively with technical members of other teams (.NET, Laserfiche, Sonata) to
                     resolve issues, including issues that are hard to reproduce or intermittent.
                     He should continue to give support to other members of the API build team, sharing the knowledge and
-
                     experience he has built up during the project, and ensure he is recognized by other build teams as a go-
                     to person for API related queries.
 
@@ -177,11 +177,11 @@ export async function getNavData(): Promise<NavItem[]> {
                     share their skills and experience with others are an asset to any project, and he should be given the
                     opportunity to gain experience of different roles and to take on different responsibilities so he can choose
                     what type of work is best for him.`,
-          link: "https://drive.google.com/file/d/1KqbrXOJx1XaTBSAvkCw_OzA_fLimuGha/view?usp=drive_link", // Link to the testimonial provider's profile or related content
+          link: "https://drive.google.com/file/d/1KqbrXOJx1XaTBSAvkCw_OzA_fLimuGha/preview", // Link to the testimonial provider's profile or related content
         },
         {
           name: "Gaurav Chhabra",
-          role: "Manager at Accenture",
+          role: "Manager @Accenture",
           content: `Piyush – We appreciate your contributions towards the team and the fantastic feedback you have received from Ruth. Within a
             short span of time you have understood the API landscape and have worked on some real complex integrations and have challenged
             the TD team at multiple occasions.
@@ -189,15 +189,15 @@ export async function getNavData(): Promise<NavItem[]> {
             soon and I am sure your understanding of the current release and architecture will help us a long way. I believe now is also the time
             where we have to build the skill within the team and make everyone technically strong and you will have to play a major role in this
             area.
-            We would like you to develop new skills especially in the cloud area and plan for a certification and lets look for any manual activities
+            \nWe would like you to develop new skills especially in the cloud area and plan for a certification and lets look for any manual activities
             in the team and explore how can we automate them.`,
-          link: "https://drive.google.com/file/d/1BkJWyAZ6ph3WSK5z12SHnSYibRI1bzZ8/view?usp=drive_link", // Link to the testimonial provider's profile or related content
+          link: "https://drive.google.com/file/d/1BkJWyAZ6ph3WSK5z12SHnSYibRI1bzZ8/preview", // Link to the testimonial provider's profile or related content
         },
       ],
       certifications: [
         {
-          name: "Microsoft Certified - Azure AI Engineer Associate:",
-          issuer: "Micrsoft",
+          name: "Microsoft Certified - Azure AI Engineer Associate",
+          issuer: "Microsoft",
           date: "June 30, 2024",
           image: "https://img.icons8.com/?size=100&id=22989&format=png&color=000000", // Replace with the path to your certification image
           digitalCertificateUrl: "https://learn.microsoft.com/api/credentials/share/en-us/PiyushGoel/8A0C7EB015C2FB39?sharingId=E17775CD9A0772BB", // Link to the digital certificate
