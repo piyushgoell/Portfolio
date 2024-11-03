@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { PortfolioData } from "@/lib/types/portfolio";
+import { PortfolioData } from "@/lib/types/Portfolio";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { fadeInUp } from "@/lib/animate/animation";
+import { fadeInUp } from "@/lib/animate/Animation";
 
 const Skills: React.FC<{ data: PortfolioData }> = ({ data }) => {
   return (

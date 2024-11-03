@@ -4,10 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react"; // Import icons
 import { Button } from "@/components/ui/Button"; // Ensure Button component is imported
-import { PortfolioData } from "@/lib/types/portfolio"; // Type for props
+import { PortfolioData } from "@/lib/types/Portfolio"; // Type for props
 import profilePic from "@/lib/images/piyush_photo.png"; // Profile picture
 import { useState } from "react";
-import { letterAnimate, sentenceAnimate } from "@/lib/animate/animation";
+import { letterAnimate, sentenceAnimate } from "@/lib/animate/Animation";
 
 const Home: React.FC<{ data: PortfolioData }> = ({ data }) => {
   const [nameAnimationCompleted, setNameAnimationCompleted] = useState(false);

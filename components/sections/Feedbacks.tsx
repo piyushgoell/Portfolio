@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { PortfolioData } from "@/lib/types/portfolio";
+import { PortfolioData } from "@/lib/types/Portfolio";
 import {
   Card,
   CardContent,
@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/Card";
-import { fadeInUp } from "@/lib/animate/animation";
+import { fadeInUp } from "@/lib/animate/Animation";
 import { Button } from "@/components/ui/Button";
 import { useState } from "react";
 import PDFModal from "@/components/ui/PDFModal"; // Ensure PDFModal is correctly imported

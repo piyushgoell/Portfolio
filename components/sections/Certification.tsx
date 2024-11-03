@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { PortfolioData } from "@/lib/types/portfolio";
+import { PortfolioData } from "@/lib/types/Portfolio";
 import {
   Card,
   CardContent,
@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/Card";
-import { fadeInUp } from "@/lib/animate/animation";
+import { fadeInUp } from "@/lib/animate/Animation";
 
 const Certification: React.FC<{ data: PortfolioData }> = ({ data }) => {
   return (

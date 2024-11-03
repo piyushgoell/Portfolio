@@ -24,7 +24,7 @@ import {
   getNavData,
   PortfolioData,
   NavItem,
-} from "@/lib/types/portfolio";
+} from "@/lib/types/Portfolio";
 import { motion } from "framer-motion";
 import { Home, Navbar, Skills, Experience, Certification, Feedbacks }from "@/components/sections";
 
