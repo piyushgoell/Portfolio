@@ -39,14 +39,14 @@ const Home: React.FC<{ data: PortfolioData }> = ({ data }) => {
 
       {/* Name */}
       <motion.div
-        key={`Hi, I'm `+data?.name}
+        key={data?.name}
         variants={sentenceAnimate}
         initial="hidden"
         animate="visible"
         className="text-6xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg"
         onAnimationComplete={() => setNameAnimationCompleted(true)} // Trigger when animation completes
       >
-        {data?.name.split("").map((char, i) => (
+        {(`Hi, I'm `+data?.name).split("").map((char, i) => (
           <motion.span key={`${char}-${i}`} variants={letterAnimate}>
             {char}
           </motion.span>

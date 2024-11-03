@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 
-const Footer:  React.FC<{ data: PortfolioData }> = ({ data }) => {
+const Footer: React.FC<{ data: PortfolioData }> = ({ data }) => {
   return (
     <motion.footer
       className="flex flex-col gap-4 sm:flex-row py-6 w-full items-center px-4 md:px-6 bg-primary transition-colors duration-300"

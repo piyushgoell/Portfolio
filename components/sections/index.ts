@@ -9,3 +9,4 @@ export { default as YoutubeChannel} from './YoutubeChannel';
 export { default as Projects} from './Projects';
 export { default as GetInTouch} from './GetInTouch';
 export { default as Footer} from './Footer';
+export { default as Main} from './Main';

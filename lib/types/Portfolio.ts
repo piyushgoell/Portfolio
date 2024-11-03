@@ -74,6 +74,7 @@ export interface NavItem {
   label: string;
 }
 
+
 // Asynchronous function to get navigation data
 export async function getNavData(): Promise<NavItem[]> {
   return [
