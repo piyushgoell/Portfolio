@@ -2,16 +2,16 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
-import { fadeInUp } from "@lib/animate/animation"; // Use the alias here
-import { PortfolioData } from "@/lib/types/Portfolio";
+import { Button } from "@/components/ui/button";
+import { PortfolioData } from "@/lib/types/portfolio";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/Card";
+} from "@/components/ui/card";
+import { fadeInUp } from "@/lib/animate/animation";
 
 const Certification: React.FC<{ data: PortfolioData }> = ({ data }) => {
   return (

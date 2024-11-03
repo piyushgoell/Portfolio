@@ -1,4 +1,4 @@
-import { PortfolioData } from "@/lib/types/Portfolio";
+import { PortfolioData } from "@/lib/types/portfolio";
 import { motion } from 'framer-motion';
 import {
     Card,
@@ -6,7 +6,7 @@ import {
     CardDescription,
     CardHeader,
     CardTitle,
-  } from "@/components/ui/Card";
+  } from "@/components/ui/card";
 import { fadeInUp } from "@/lib/animate/animation";
 
 const Experience: React.FC<{data: PortfolioData}> = ({ data } ) => {

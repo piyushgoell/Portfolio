@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { PortfolioData } from "@/lib/types/Portfolio";
+import { PortfolioData } from "@/lib/types/portfolio";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/Card";
+} from "@/components/ui/card";
 import { fadeInUp } from "@/lib/animate/animation";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import PDFModal from "@/components/ui/PDFModal"; // Ensure PDFModal is correctly imported
+import PDFModal from "@/components/ui/pdfModal"; // Ensure PDFModal is correctly imported
 
 const Feedbacks: React.FC<{ data: PortfolioData }> = ({ data }) => {
   const [isModalOpen, setModalOpen] = useState(false);

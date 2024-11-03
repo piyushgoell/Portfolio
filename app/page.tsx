@@ -11,20 +11,20 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/Card";
+} from "@/components/ui/card";
 import {
   getPortfolioData,
   getNavData,
   PortfolioData,
   NavItem,
-} from "@/lib/types/Portfolio";
+} from "@/lib/types/portfolio";
 import { motion } from "framer-motion";
 import { Home, Navbar, Skills, Experience, Certification, Feedbacks }from "@/components/sections";
 

@@ -1,10 +1,10 @@
 // /components/Navbar.tsx
 import { useState } from 'react';
 import Link from 'next/link';
-import { Button } from "@/components/ui/Button"; // Ensure Button component is imported
+import { Button } from "@/components/ui/button"; // Ensure Button component is imported
 import { Menu } from 'lucide-react'; // Ensure Menu icon is imported
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/Sheet"; // Adjust the import path as necessary
-import { NavItem } from '@/lib/types/Portfolio'; // Adjust the import path as necessary
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"; // Adjust the import path as necessary
+import { NavItem } from '@/lib/types/portfolio'; // Adjust the import path as necessary
 
 // Update NavItem type to be an array
 const Navbar: React.FC<{ navItems: NavItem[] }> = ({ navItems }) => {
