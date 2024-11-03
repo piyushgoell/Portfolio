@@ -27,6 +27,7 @@ import {
 } from "@/lib/types/Portfolio";
 import { motion } from "framer-motion";
 import { Home, Navbar, Skills, Experience, Certification, Feedbacks }from "@/components/sections";
+import { fadeInUp } from "@/lib/animate/Animation";
 
 
 
@@ -46,21 +47,12 @@ export default function Portfolio() {
     fetchData();
   }, []);
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }, // Move `transition` inside `animate`
-    },
-  };
-
   if (!data) {
-    return <p className="text-white">Loading...</p>; // Show loading state
+    return <motion.div className="bg-primary"></motion.div>; // Show loading state
   }
   return (
     
-    <div className="flex flex-col min-h-screen">
+    <motion.div className="flex flex-col min-h-screen bg-primary">
       
       <header className="sticky top-0 z-50 w-full bg-primary">
         <Navbar navItems={navItems}/>
@@ -291,6 +283,6 @@ export default function Portfolio() {
           </Link>
         </nav>
       </footer>
-    </div>
+    </motion.div>
   );
 }
